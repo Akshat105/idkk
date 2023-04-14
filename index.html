@@ -1,0 +1,113 @@
+<head>
+    <title>idk</title>
+    <style>
+        body {
+            background-color: rgb(72, 170, 211);
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #counter {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+        p {
+            text-align: center;
+            font-size: 32px;
+            font-family: Arial;
+        }
+        img {
+            display: block;
+            margin:0 auto;
+            width:20%;
+        }
+        p2 {
+            text-align: left;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        #button1 {
+            /* Add some styling to the button */
+            background-color: white;
+            color: pink;
+            font-size: 30px;
+            padding: 10px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 40px;
+        }
+        #button2 {
+            position:absolute;
+            background-color: white;
+            color: pink;
+            font-size: 30px;
+            padding: 10px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 40px;
+        }
+        #counter {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-family: Arial;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <p2>Hey.. So..I really like you and your vibe and find you cute. <br><br>I wanted to ask you out cuz u asked me to but then lets keep that for later <br>cuz idk if things are right between us but I really want it to be.. <br><br><br> so i feel like i hv been treating u like shit so i'm sorry for that :(
+    </p2>
+    <p>Just wanted to know that are you still mad at me?</p>
+    <img src="IMG_2217.png">
+    <button id="button1">No</button>
+    <button id="button2">Yes</button>
+    <h3><br><br><br><br><br>P.s. sometimes I also feel bad so i hope u keep this into consideration too :/</h3>
+    <div id="counter"></div>
+    <script>
+        setInterval(function(){
+            var button2= document.getElementById("button2");
+            var x=Math.random()*window.innerWidth;
+            var y=Math.random()*window.innerHeight;
+            button2.style.left=x+"px";
+            button2.style.top=y+"px";
+        }, 250);
+    </script>
+    <script>
+        document.getElementById("button1").onclick=function(){
+            alert("good cuz I won't let you be mad so u better not be :)..");
+        }
+    </script>
+        <div id="counter"></div>
+    <script>
+        // Set the date to December 12th 2022
+        var countDownDate = new Date("December 12, 2022 00:00:00").getTime();
+
+        // Update the count down every 1 millisecond
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = now - countDownDate;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            var milliseconds = distance % 1000;
+            var nanoseconds = milliseconds * 1000000;
+
+            // Display the counter
+            document.getElementById("counter").innerHTML = "Time since we know each other technically(12th december ig idk):<br>" + days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds, " + milliseconds + " milliseconds, " + nanoseconds + " nanoseconds.";
+
+        }, 1);  
+
+    </script>
+</body>
